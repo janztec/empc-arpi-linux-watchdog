@@ -4,6 +4,11 @@ ERR='\033[0;31m'
 INFO='\033[0;32m'
 NC='\033[0m' # No Color
 
+if [ $EUID -ne 0 ]; then
+    echo -e "$ERR ERROR: This script should be run as root. $NC" 1>&2
+    exit 1
+fi
+
 if (cat /etc/issue | grep -v Raspbian) then
     echo -e "$ERR ERROR: This script is only compatible with Raspbian Linux. $NC" 1>&2
     exit 1
