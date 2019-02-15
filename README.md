@@ -10,6 +10,7 @@ Prerequisites:
 
 ```
 cd /tmp
+sudo bash
 wget https://raw.githubusercontent.com/janztec/empc-arpi-linux-watchdog/master/install-experimental.sh -O install-experimental.sh
-pi@raspberrypi:/tmp $ sudo bash install-experimental.sh
+bash install-experimental.sh
 ```
